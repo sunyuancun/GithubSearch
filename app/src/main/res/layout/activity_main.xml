@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.syc.githubsearch.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/search_line"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_keyword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="sunyuancun" />
+
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="搜索"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_line" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/empty_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_line">
+        <ImageView
+            android:id="@+id/icon_empty"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/empty"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/icon_empty"
+            android:gravity="center"
+            android:textColor="#66000000"
+            android:text="无数据"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>
